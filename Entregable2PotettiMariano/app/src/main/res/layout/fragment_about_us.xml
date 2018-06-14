@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@drawable/aboutusrec2"
+    tools:context=".FragmentAboutUs"
+    android:layout_gravity="center"
+    android:alpha="0.93"
+       >
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7">
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Somos la app\n donde podes encontrar\nlas recetas marinas\n mas ricas \n"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:textColor="@color/colorcard"
+            android:alpha="0.7"
+            android:fontFamily="casual"
+            android:textStyle="bold|italic"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:textAlignment="center"
+            android:text="¿Dudas, comentarios? escribinos a\ntucocinadelmar@seameal.com "
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/colorcard"
+            android:alpha="0.7"
+            android:fontFamily="casual"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="www.map-apps.com"
+            android:gravity="end"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/colorcard"
+            android:textSize="15sp"
+            android:textStyle="bold|italic"
+            android:fontFamily="sans-serif"
+            android:alpha="0.8"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>
