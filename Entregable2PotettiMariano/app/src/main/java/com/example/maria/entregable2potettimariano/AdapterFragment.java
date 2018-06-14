@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterFragment extends RecyclerView.Adapter {
@@ -47,7 +48,17 @@ public class AdapterFragment extends RecyclerView.Adapter {
             return 0;
 
         }
+
+
+        }
+    public void filteredList(ArrayList<Receta>filterList) {
+
+        listaRecetasAdapter =  filterList;
+        notifyDataSetChanged();
+
     }
+
+
 
     private class ViewHolderReceta extends RecyclerView.ViewHolder {
         TextView textViewSuperiorCelda = itemView.findViewById(R.id.textView_superior_celda_Recycler);

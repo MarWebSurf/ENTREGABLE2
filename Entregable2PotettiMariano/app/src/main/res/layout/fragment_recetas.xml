@@ -5,12 +5,30 @@
     android:layout_height="match_parent"
     tools:context=".FragmentRecetas"
     android:orientation="vertical"
-    android:background="@color/colorback"
+    android:background="@drawable/undersea_3_2_transparente"
     android:gravity="center">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="10dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/colortexto"
+        android:id="@+id/editTextBuesqueda"
+        android:hint="Buscar Receta"
+        android:theme="@style/EditText"
+        android:textSize="30sp"
+        android:fontFamily="cursive"
+        android:textColorHint="@color/colorNavigation"
+        android:gravity="bottom"
+
+
+        />
+    />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/undersea_3_2_transparente"
         android:orientation="vertical"
         android:gravity="center"
         >
