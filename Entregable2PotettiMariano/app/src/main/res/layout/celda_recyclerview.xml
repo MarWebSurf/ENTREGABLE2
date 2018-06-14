@@ -30,11 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:padding="10dp"
+        android:padding="7dp"
         tools:text="textoSuperior"
         android:fontFamily="casual"
         android:textColor="@color/colortexto"
-        android:textSize="19sp"
+        android:textSize="18sp"
         android:gravity="center"
         android:textStyle="bold|italic"/>
 
