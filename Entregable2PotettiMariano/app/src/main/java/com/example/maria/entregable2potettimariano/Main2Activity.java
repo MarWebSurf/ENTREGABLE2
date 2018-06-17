@@ -35,15 +35,34 @@ public class Main2Activity extends AppCompatActivity {
         viewPager.setAdapter(adapterViewPagerFragmentDetalleReceta);
 
         //Como un ejemplo, hardcodeo que el view pager comenzará en la posición 2 (en el tercer fragment)
-        int posicionDelItem = 0;
+    /*    int posicionDelItem = 0;
         for (Integer i = 0; i < listaRecetasRecibidas.size(); i++) {
             if (listaRecetasRecibidas.get(i).equals(recetaRecibida)) {
                 posicionDelItem = i;
                 break;
             }
         }
+        viewPager.setCurrentItem(posicionDelItem)*/
 
-        viewPager.setCurrentItem(posicionDelItem);
+
+        viewPager.setCurrentItem(listaRecetasRecibidas.indexOf(recetaRecibida));
+       // listaRecetasRecibidas.indexOf(recetaRecibida);
+
+
+
+            /* 1 -para tomar la posicion q clickeo en el recycler y setearla para el pager view puedo hacer como hice yo que ..al crear el adapter del  recycler  en el fragment
+             o activity(en este caso en el  fragment, le paso al adapter por constructor la lista que tengo como atributo(q es la lista harcodeada que cree en el mismo fragment(o activity).
+              Esa misma lista , se la pase desde el fragment al activity 1 q contiene el fragment, por la interface (ademas de la receta q ya le pasaba. Despues el activity 1 le pasa esas 2 cosas\
+               por bundle al activity2 y el activity 2 recibe esa lista y receta x bundle y las usa para el metodo cargarFragmentHarcodeados, que genera una lista de detalleFRagmentReceta que es la
+                q se le pasa al view pager, y la receta la use para comparar con un for comun de la lista de recetas que viajaron juntas.. , es decir comparo cada elemento y cuando coincida x ej el titulo ,
+                 tomo ese elem del for y lo seteo como parametro en setCurrentitem(esarecetaque coincidiodel for). En este caso la activity 1 es la q les paso la misma lista al adapter de recycler y al metodo
+                  de la ifaz que crea ese fragment y ese metodo es el que se ejecuta en la ifaz que @override ese frag por implementar la ifaz del adapter..ver.
+    2- Otra opcion es que desde el adapter del recyvler , dir' en vez de una receta se mande x parametro la posicion(getAdapterposition) y la lista que recibio y quedo seteada x constructort cuando se creo ese adapter.
+    entonces eso viaja adapterRecycler-fragment-activiti1-activity2 y la activity 2 usa esa lista y busca esa posicion p hacer setCurrentintem al viewpager y ya..
+    3 - Y la otra es hacer como en esta foto, pasar solo la receta desde el adapter del recycler y en el activity2  con esa receta y la lista q tengo o en el fragmento o activ q estoy parado o la traigo con ese metodo del controller(ver..)
+     y con con eso hago un for y busco con equals como en la 1er forma q describo aca arriba.
+     4-OOO en vez de hacer un  for  dir hago mas corto un idexOf(recetarecibida)--->  viewPager.setCurrentItem(listaRecetasRecibidas.indexOf(recetaRecibida)); y chau!*/
+
 
         //Esto es para poder ver un fragmento del siguiente/anterior fragment. Que el fragment no ocupe el ancho de la pantalla.
         //viewPager.setClipToPadding(false);
